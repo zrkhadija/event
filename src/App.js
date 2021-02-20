@@ -15,6 +15,7 @@ const App = () => {
   };
   return (
     <div className="container">
+      {/* test client */}
       <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
      <h1> React Dashboard</h1>
      <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar}/>
