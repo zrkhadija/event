@@ -29,20 +29,27 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
         </div>
         <div className="sidebar__link">
           <i className="fa fa-building-o"></i>
-          <a href="#">Company Management</a>
+          <a href="#">Marketing</a>
         </div>
         <div className="sidebar__link">
           <i className="fa fa-wrench"></i>
-          <a href="#">Employee Management</a>
+          <a href="#">Settings</a>
+        </div>
+        <div className="sidebar__link">
+          <i className="fa fa-files-o"></i>
+          <a href="#">Suppression</a>
         </div>
         <div className="sidebar__link">
           <i className="fa fa-archive"></i>
-          <a href="#">Warehouse</a>
+          <a href="#">Template</a>
         </div>
         <div className="sidebar__link">
-          <i className="fa fa-handshake-o"></i>
-          <a href="#">Contracts</a>
+          <i className="fa fa-calendar-check-o"></i>
+          <a href="#">Activity</a>
         </div>
+        {/* <div className="sidebar__link">
+          <i className="fa fa-handshake-o"></i>
+  <a href="#">Contracts</a>
         <h2>LEAVE</h2>
         <div className="sidebar__link">
           <i className="fa fa-question"></i>
@@ -52,14 +59,8 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
           <i className="fa fa-sign-out"></i>
           <a href="#">Leave Policy</a>
         </div>
-        <div className="sidebar__link">
-          <i className="fa fa-calendar-check-o"></i>
-          <a href="#">Special Days</a>
-        </div>
-        <div className="sidebar__link">
-          <i className="fa fa-files-o"></i>
-          <a href="#">Apply for leave</a>
-        </div>
+      
+       
         <h2>PAYROLL</h2>
         <div className="sidebar__link">
           <i className="fa fa-money"></i>
@@ -68,7 +69,7 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
         <div className="sidebar__link">
           <i className="fa fa-briefcase"></i>
           <a href="#">Paygrade</a>
-        </div>
+       </div>*/}
         <div className="sidebar__logout">
           <i className="fa fa-power-off"></i>
           <a href="#">Log out</a>

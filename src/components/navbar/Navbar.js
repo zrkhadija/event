@@ -12,9 +12,12 @@ const Navbar=({sidebarOpen,openSidebar})=>{
        </div>
 
              <div className="navbar__left">
-                   <a href="#">Your messages</a>
-                   <a href="#">hello</a>
-                    <a  className="active_link"href="#">admin</a>
+                   <a href="#">REQUESTS</a>
+                   <a  className="active_link"href="#">SPAM</a>
+                   <a href="#"> DELIVERED</a>
+                   <a href="#">  CLICKED</a>
+                   <a href="#"> OPENED </a>
+                 {/*  <a  className="active_link"href="#">admin</a>*/}
              </div>
             <div className="navbar__right">
                   <a href="#">
