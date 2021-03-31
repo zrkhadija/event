@@ -7,7 +7,7 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
       <div className="sidebar__title">
         <div className="sidebar__img">
           <img src={logo} alt="logo" />
-          <h1>Codersbite</h1>
+          <h1>Amazon SES</h1>
         </div>
         <i
           onClick={() => closeSidebar()}
