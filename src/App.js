@@ -1,9 +1,12 @@
 import { useState } from "react";
 import "./App.css";
+import login from "./components/Login/login";
 
 import Navbar from "./components/navbar/Navbar";
 import Sidebar from "./components/sidebar/Sidebar";
-
+import {
+  BrowserRouter as Router, Switch, Route, Link 
+  } from 'react-router-dom';
 
 const App = () => {
   const [sidebarOpen, setsidebarOpen] = useState(false);
@@ -13,17 +16,24 @@ const App = () => {
   const closeSidebar = () => {
     setsidebarOpen(false);
   };
-  return (
+  return ( <Router>
     <div className="container">
+    
       {/* test client */}
       <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
-     <h1> React Dashboard</h1>
+     <Link to="/signup">login </Link>
+     <Link to="/login">sign up</Link>
+     
      <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar}/>
-    </div>
+     <Switch>
+   <Route path="/" exact component={App}/>
+   <Route path="/login" component={login}/>
+   </Switch>
+     </div>
+     </Router>
+   
+    
   );
 };
 
 export default App;
-
-
-
