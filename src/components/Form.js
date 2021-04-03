@@ -11,12 +11,7 @@ const Form = () => {
   }
   return (
     <> 
-      <div className='form-container'>
-        <span className='close-btn'>×</span>
-        <div className='form-content-left'>
-          <center>
-          <img  src='img/awss.jpg' alt='' /></center>
-        </div>
+     
         {!isSubmitted ? (
           <FormSignup submitForm={submitForm} />
         ) : (
@@ -24,7 +19,7 @@ const Form = () => {
         
         )}
       
-      </div>
+
     </>
   );
 };

@@ -1,7 +1,10 @@
 import React from 'react';
-import validate from './validateInfo';
+import validate from './ValidateInfo';
 import useForm from './useForm';
 import './Form.css';
+
+import {Link}  from "react-router-dom"; 
+
 
 const FormSignup = ({ submitForm }) => {
   const { handleChange, handleSubmit, values, errors } = useForm(
@@ -9,7 +12,13 @@ const FormSignup = ({ submitForm }) => {
     validate
   );
 
-  return (
+ return (
+    <div className='form-container'>
+  
+    <div className='form-content-left'>
+      
+      
+      </div>
     <div className='form-content-right'>
       <form onSubmit={handleSubmit} className='form' noValidate>
         <h1>
@@ -67,11 +76,15 @@ const FormSignup = ({ submitForm }) => {
         <button className='form-input-btn' type='submit'>
           Sign up
         </button>
+        
         <span className='form-input-login'>
-          Already have an account? Login <a href='./login.js'>here</a>
+          Already have an account? <Link to="/Login"> login</Link>
+
         </span>
-      </form>
+        </form>
     </div>
+    </div>
+    
   );
 };
 

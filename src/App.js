@@ -1,38 +1,31 @@
-import { useState } from "react";
-import "./App.css";
-import login from "./components/Login/login";
 
-import Navbar from "./components/navbar/Navbar";
-import Sidebar from "./components/sidebar/Sidebar";
+import "./App.css";
+import Login from './components/Login';
+import Form from './components/Form';
 import {
-  BrowserRouter as Router, Switch, Route, Link 
-  } from 'react-router-dom';
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  } from "react-router-dom";
+
 
 const App = () => {
-  const [sidebarOpen, setsidebarOpen] = useState(false);
-  const openSidebar = () => {
-    setsidebarOpen(true);
-  };
-  const closeSidebar = () => {
-    setsidebarOpen(false);
-  };
-  return ( <Router>
-    <div className="container">
+
+  return ( 
     
-      {/* test client */}
-      <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
-     <Link to="/signup">login </Link>
-     <Link to="/login">sign up</Link>
+    <Router>
+     <div className="container">
+    
+    <Switch>
+       <Route  path="/" exact component={Login}/>
+        <Route  path="/FormSignup" component={Form}/> 
+          
+             </Switch>
+         </div>
+        
+  
+   </Router>
      
-     <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar}/>
-     <Switch>
-   <Route path="/" exact component={App}/>
-   <Route path="/login" component={login}/>
-   </Switch>
-     </div>
-     </Router>
-   
-    
   );
 };
 
