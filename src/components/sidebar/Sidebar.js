@@ -1,6 +1,6 @@
 import "./Sidebar.css";
 import logo from "../../assets/logo.png";
-
+import {Link}  from "react-router-dom";
 const Sidebar = ({ sidebarOpen, closeSidebar }) => {
   return (
     <div className={sidebarOpen ? "sidebar_responsive" : ""} id="sidebar">
@@ -72,7 +72,7 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
        </div>*/}
         <div className="sidebar__logout">
           <i className="fa fa-power-off"></i>
-          <a href="#">Log out</a>
+          <Link to="/">Log out</Link>
         </div>
       </div>
     </div>

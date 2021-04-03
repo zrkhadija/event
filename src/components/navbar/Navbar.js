@@ -12,16 +12,17 @@ const Navbar=({sidebarOpen,openSidebar})=>{
        </div>
 
       <div className="navbar__left">
-                   <a href="#">Login</a>
-                   <a  className="active_link"href="#">Sign up </a>
+                   <a href="#">
+                   <a  className="active_link"href="#"></a></a>
                   
                  {/*  <a  className="active_link"href="#">admin</a>*/}
              </div>
             <div className="navbar__right">
-                  <a href="#">
-                      <i className="fa fa-search"></i>
-                  </a>
-     
+                  <div class="search-wrapper">
+                      <span className="las la-search"></span>
+                      <input type="search" placeholder="search here" />
+               
+     </div>
                       <a href="#">
                           <i className="fa fa-clock-o"></i>
                       </a>
