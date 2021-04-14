@@ -1,6 +1,9 @@
 import "./Sidebar.css";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/amazon2.png";
 import {Link}  from "react-router-dom";
+import Login from '../Login';
+import Creationcompagne from '../Creationcompagne';
+
 const Sidebar = ({ sidebarOpen, closeSidebar }) => {
   return (
     <div className={sidebarOpen ? "sidebar_responsive" : ""} id="sidebar">
@@ -29,11 +32,11 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
         </div>
         <div className="sidebar__link">
           <i className="fa fa-building-o"></i>
-          <a href="#">Marketing</a>
+          <Link to="././Creationcompagne"> Create new company</Link>
         </div>
         <div className="sidebar__link">
           <i className="fa fa-wrench"></i>
-          <a href="#">Settings</a>
+          <a href="#"> Contacts</a>
         </div>
         <div className="sidebar__link">
           <i className="fa fa-files-o"></i>
@@ -53,8 +56,8 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
         <h2>LEAVE</h2>
         <div className="sidebar__link">
           <i className="fa fa-question"></i>
-          <a href="#">Requests</a>
-        </div>
+          <a href="#"></a>
+        </div>  
         <div className="sidebar__link">
           <i className="fa fa-sign-out"></i>
           <a href="#">Leave Policy</a>
@@ -72,7 +75,7 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
        </div>*/}
         <div className="sidebar__logout">
           <i className="fa fa-power-off"></i>
-          <Link to="/">Log out</Link>
+          <Link to="././Login">Log out</Link>
         </div>
       </div>
     </div>
