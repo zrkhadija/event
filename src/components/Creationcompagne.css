@@ -1,0 +1,14 @@
+.content{
+    top: 50%;
+    left: 50%;
+    margin-top: 100px;
+    margin-left: 100px;
+ width : 900px;
+ height: 450px;
+}
+.box {
+    background-color: rgb(178, 185, 185);
+    padding: 2em;
+    border : 2px solid rgb(64, 71, 71);
+    box-shadow: 0 0 50px 20px rgba(0, 0, 0, .5);
+}
