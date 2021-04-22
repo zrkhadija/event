@@ -14,27 +14,29 @@ import Badge from '@material-ui/core/Badge';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import Fab from '@material-ui/core/Fab';
-import AddIcon from '@material-ui/icons/Add';
+import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import TextField from '@material-ui/core/TextField';
-import { DataGrid } from '@material-ui/data-grid';
-import { useDemoData } from '@material-ui/x-grid-data-generator';
+import NotificationsIcon from '@material-ui/icons/Notifications';
+import './Contacts';
+import Orders from './Contacts';
+import Chart from './charts/chart';
 import { mainListItems, secondaryListItems } from './listItems';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-
-
+function Footer() {
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      {'Copyright © '}
+      
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+}
 
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
-    form: {
-        '& > *': {
-          margin: theme.spacing(1),
-          width: '25ch',
-        },
-      },
   root: {
     display: 'flex',
   },
@@ -113,12 +115,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Creationcompagne() {
-    const { data } = useDemoData({
-        dataSet: 'Company name',
-        rowLength: 100,
-        maxColumns: 6,
-      });
+export default function Dashboard() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {
@@ -141,7 +138,7 @@ export default function Creationcompagne() {
             onClick={handleDrawerOpen}
             className={clsx(classes.menuButton, open && classes.menuButtonHidden)}
           >
-            <MenuIcon /> 
+            <MenuIcon />
           </IconButton>
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             Amazon SES
@@ -175,20 +172,26 @@ export default function Creationcompagne() {
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
             {/* Chart */}
-            <Grid item xm={12} md={8} lg={12}>
+            <Grid item xs={12} md={8} lg={9}>
               <Paper className={fixedHeightPaper}>
-              
-              <form className={classes.form} noValidate autoComplete="off">
-            
-       </form>
+              <Chart />
               </Paper>
             </Grid>
-            
-           </Grid>
+            {/* Recent Deposits */}
+            <Grid item xs={12} md={4} lg={3}>
+              <Paper className={fixedHeightPaper}>
+                
+              </Paper>
+            </Grid>
+            {/* Recent Orders */}
+            <Grid item xs={12}>
+              <Paper className={classes.paper}>
+                <Orders />
+              </Paper>
+            </Grid>
+          </Grid>
           <Box pt={4}>
-          <div style={{ height: 400, width: '100%' }}>
-      <DataGrid rowHeight={25} {...data} />
-    </div>
+            <Footer/>
           </Box>
         </Container>
       </main>

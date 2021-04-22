@@ -1,23 +1,12 @@
-
-import { useState } from "react";
-import Sidebar from'./sidebar/Sidebar';
-
-import Navbar from'./navbar/Navbar';
+import React from 'react'
+import Copyright from './dashboard';
 
 
 const FormSuccess= () => {
-  const [sidebarOpen, setsidebarOpen] = useState(false);
-  const openSidebar = () => {
-    setsidebarOpen(true);
-  };
-  const closeSidebar = () => {
-    setsidebarOpen(false);
-  };
+  
    return (
      <div className="container">
-   
-      <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
-      <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar}/>
+<Copyright />
      </div>
    );
  };
