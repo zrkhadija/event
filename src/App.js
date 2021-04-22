@@ -9,7 +9,7 @@ import {
   Switch,
   Route,
   } from "react-router-dom";
-import SendMsg from "./components/SendMsg";
+
 
 
 const App = () => {
@@ -22,8 +22,8 @@ const App = () => {
     <Switch>
        <Route  path="/" exact component={Form}/>
         <Route  path="/Login" component={Login}/> 
-        <Route path = "/Creationcompagne" component={Creationcompagne}/>
-        <Route path="/SendMsg" component={SendMsg}/>
+        <Route  path="/Creationcompagne" component={Creationcompagne}/> 
+       
           
              </Switch>
          </div>
